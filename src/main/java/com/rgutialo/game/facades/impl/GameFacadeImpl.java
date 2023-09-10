@@ -11,6 +11,9 @@ import org.springframework.stereotype.Component;
 import java.util.Arrays;
 import java.util.Optional;
 
+/**
+ * Implementation of {@link GameFacade}
+ */
 @Component
 public class GameFacadeImpl implements GameFacade {
 
@@ -21,6 +24,9 @@ public class GameFacadeImpl implements GameFacade {
         this.gameService = gameService;
     }
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public Optional<GameOptionsEnum> setUserOption(final Integer option) {
         if (!validateOption(option))
@@ -28,19 +34,35 @@ public class GameFacadeImpl implements GameFacade {
         return Optional.of(GameOptionsEnum.valueOf(option));
     }
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public GameOptionsEnum getComputerOption() {
         return gameService.generateRandomOption();
     }
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public Optional<GameResult> playGame(final GameRequest gameRequest) {
         return gameService.playGame(gameRequest);
     }
 
-    private boolean validateOption(final Integer userOption){
+    /**
+     * {@inheritDoc}
+     */
+    private boolean validateOption(final Integer userOption) {
         if (Arrays.stream(GameOptionsEnum.values()).anyMatch(options -> options.getValue().equals(userOption)))
             return true;
         return false;
     }
+
+    private boolean validateOption2(final String userOption) {
+        if (Arrays.stream(GameOptionsEnum.values()).anyMatch(options -> options.getValue().equals(userOption)))
+            return true;
+        return false;
+    }
+
 }

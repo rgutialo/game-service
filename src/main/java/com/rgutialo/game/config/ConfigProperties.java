@@ -4,6 +4,7 @@ import com.rgutialo.game.models.enums.GameOptionsEnum;
 import com.rgutialo.game.models.enums.GameResultEnum;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.tuple.Pair;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.DependsOn;
@@ -12,6 +13,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * Manages game-rules matrix
+ */
 @Configuration
 @Slf4j
 public class ConfigProperties {

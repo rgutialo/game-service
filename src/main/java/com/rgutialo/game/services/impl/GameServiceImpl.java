@@ -15,6 +15,9 @@ import java.util.Map;
 import java.util.Optional;
 import java.util.random.RandomGenerator;
 
+/**
+ * Implementation of {@link GameService}
+ */
 @Service
 public class GameServiceImpl implements GameService {
 
