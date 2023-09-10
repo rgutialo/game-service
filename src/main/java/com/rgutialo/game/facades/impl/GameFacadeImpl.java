@@ -59,10 +59,4 @@ public class GameFacadeImpl implements GameFacade {
         return false;
     }
 
-    private boolean validateOption2(final String userOption) {
-        if (Arrays.stream(GameOptionsEnum.values()).anyMatch(options -> options.getValue().equals(userOption)))
-            return true;
-        return false;
-    }
-
 }

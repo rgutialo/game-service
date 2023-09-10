@@ -39,7 +39,7 @@ public class GameController {
 
         Optional<GameOptionsEnum> userOption = gameFacade.setUserOption(option);
         if (userOption.isPresent())
-            return ResponseEntity.accepted().body(userOption.get());
+            return ResponseEntity.ok().body(userOption.get());
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
     }
 
@@ -51,7 +51,7 @@ public class GameController {
     @GetMapping("/computer-option")
     public ResponseEntity<GameOptionsEnum> getComputerOption() {
         final GameOptionsEnum computerOption = gameFacade.getComputerOption();
-        return ResponseEntity.accepted().body(computerOption);
+        return ResponseEntity.ok().body(computerOption);
     }
 
     /**
