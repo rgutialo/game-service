@@ -1,0 +1,7 @@
+version: '3'
+services:
+  game:
+    image: game
+    container_name: game
+    ports:
+      - "8080:8080"
