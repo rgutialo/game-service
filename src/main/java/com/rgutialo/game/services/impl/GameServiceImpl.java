@@ -13,7 +13,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
-import java.util.random.RandomGenerator;
+import java.util.SplittableRandom;
 
 /**
  * Implementation of {@link GameService}
@@ -31,8 +31,8 @@ public class GameServiceImpl implements GameService {
 
     @Override
     public GameOptionsEnum generateRandomOption() {
-        RandomGenerator generator = RandomGenerator.getDefault();
-        final int randomOption = generator.nextInt(0, GameOptionsEnum.values().length);
+        final SplittableRandom splittableRandom = new SplittableRandom();
+        final int randomOption = splittableRandom.nextInt(0, GameOptionsEnum.values().length);
         return GameOptionsEnum.valueOf(randomOption);
     }
 

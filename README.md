@@ -1,14 +1,7 @@
-# AVIATAR TEST
+# TEST
 
 ## Goal
 Create a small game of stone, scissors, paper. The user is able to select one of the symbols while the computer (i.e. the enemy) should pick its symbol randomly. The rules are applied and it is displayed which player wins.
-
-### Technical
-Create a small game of stone, scissors, paper. The user is able to select one of the symbols while the computer (i.e. the enemy) should pick its symbol randomly. The rules are applied and it is displayed which player wins.
-Technical
-Please implement this as an Application (preferably with a Spring Boot Backend and an Angular Frontend) - use this simple task to show some of your skills, so a little “over-engineering” is totally acceptable here :guiño: (hints: metrics, logging etc. might not be required here, but they are at AVIATAR) - remember this is your chance to show us your skills ;)
-Take max three weeks to complete the challenge.
-It would be great if you upload your code to a git repository afterwards and then we will invite you to a small review-session. Also please don’t include names like “AVIATAR” or “Lufthansa Technik” in your repository when you upload the code to a public repository (Github etc).
 
 ## Instructions to have the backend application up and running
 We provided as much as necessary to have this solution up and running.
